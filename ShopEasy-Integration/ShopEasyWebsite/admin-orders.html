@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders | ShopEasy Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-brand">
+                <h2>ShopEasy</h2>
+                <span>ADMIN PANEL</span>
+            </div>
+
+            <nav class="admin-navigation">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-products.html">Products</a>
+                <a href="admin-orders.html" class="active">Orders</a>
+                <a href="admin-users.html">Customers</a>
+                <a href="index.html">View Store</a>
+            </nav>
+
+            <button class="admin-sidebar-logout" onclick="adminLogout()">
+                Logout
+            </button>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+            <!-- Topbar -->
+            <header class="admin-topbar">
+                <div>
+                    <h1>Orders</h1>
+                    <p>View and manage customer orders</p>
+                </div>
+
+                <span class="admin-role-badge">Administrator</span>
+            </header>
+
+            <section class="admin-section">
+
+                <!-- Heading -->
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Order Management</h2>
+                        <p>Track customer purchases and update order status.</p>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="admin-order-summary">
+
+                    <div class="admin-order-summary-card">
+                        <span>Total Orders</span>
+                        <h3 id="allOrdersCount">0</h3>
+                    </div>
+
+                    <div class="admin-order-summary-card">
+                        <span>Pending Orders</span>
+                        <h3 id="pendingOrdersCount">0</h3>
+                    </div>
+
+                    <div class="admin-order-summary-card">
+                        <span>Delivered Orders</span>
+                        <h3 id="deliveredOrdersCount">0</h3>
+                    </div>
+
+                </div>
+
+                <!-- Orders Table -->
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Payment</th>
+                                <th>Order Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="adminOrdersBody">
+
+                            <tr>
+                                <td colspan="6" class="admin-empty-cell">
+                                    Loading orders...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="admin-footer">
+                © 2026 ShopEasy Admin Panel. All rights reserved.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="js/admin.js"></script>
+
+
+    <script src="js/integration-config.js"></script>
+    <script src="js/integration.js"></script>
+
+</body>
+</html>

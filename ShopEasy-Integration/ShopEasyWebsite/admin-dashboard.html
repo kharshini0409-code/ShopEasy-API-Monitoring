@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | ShopEasy</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-brand">
+                <h2>Shop<span>Easy</span></h2>
+                <p>ADMIN PANEL</p>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="admin-dashboard.html" class="active">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="admin-products.html">
+                    <span>▣</span> Products
+                </a>
+
+                <a href="admin-orders.html">
+                    <span>▤</span> Orders
+                </a>
+
+                <a href="admin-users.html">
+                    <span>♙</span> Customers
+                </a>
+
+                <a href="index.html">
+                    <span>⌂</span> View Store
+                </a>
+
+            </nav>
+
+            <button class="admin-sidebar-logout"
+                onclick="adminLogout()">
+                ↪ Logout
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+            <!-- Top Header -->
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome to your ShopEasy administration panel.</p>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <span class="admin-status-dot"></span>
+                    <span>Administrator</span>
+                </div>
+
+            </header>
+
+
+            <!-- Summary Cards -->
+            <section class="admin-stats-grid">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon purple">₹</div>
+                    <div>
+                        <p>Total Revenue</p>
+                        <h2 id="totalRevenue">₹0</h2>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon orange">▤</div>
+                    <div>
+                        <p>Total Orders</p>
+                        <h2 id="totalOrders">0</h2>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon green">▣</div>
+                    <div>
+                        <p>Total Products</p>
+                        <h2 id="totalProducts">0</h2>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon blue">♙</div>
+                    <div>
+                        <p>Total Customers</p>
+                        <h2 id="totalCustomers">0</h2>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Quick Actions -->
+            <section class="admin-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>Manage your online store.</p>
+                    </div>
+                </div>
+
+                <div class="admin-quick-grid">
+
+                    <a href="admin-products.html"
+                        class="admin-quick-card">
+                        <span>＋</span>
+                        <h3>Manage Products</h3>
+                        <p>Add, edit and delete products.</p>
+                    </a>
+
+                    <a href="admin-orders.html"
+                        class="admin-quick-card">
+                        <span>▤</span>
+                        <h3>Manage Orders</h3>
+                        <p>View and update customer orders.</p>
+                    </a>
+
+                    <a href="admin-users.html"
+                        class="admin-quick-card">
+                        <span>♙</span>
+                        <h3>Manage Customers</h3>
+                        <p>View registered customers.</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- Recent Orders -->
+            <section class="admin-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Recent Orders</h2>
+                        <p>Latest customer purchases.</p>
+                    </div>
+
+                    <a href="admin-orders.html"
+                        class="admin-view-all">
+                        View All →
+                    </a>
+                </div>
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="recentOrdersBody">
+
+                            <tr>
+                                <td colspan="5" class="admin-empty-cell">
+                                    Loading orders...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <footer class="admin-footer">
+                © 2026 ShopEasy Admin Panel
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="js/admin.js"></script>
+
+
+    <script src="js/integration-config.js"></script>
+    <script src="js/integration.js"></script>
+
+</body>
+</html>

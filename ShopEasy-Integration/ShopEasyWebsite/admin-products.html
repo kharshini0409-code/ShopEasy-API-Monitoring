@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products | ShopEasy Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-brand">
+                <h2>ShopEasy</h2>
+                <span>ADMIN PANEL</span>
+            </div>
+
+            <nav class="admin-navigation">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-products.html" class="active">Products</a>
+                <a href="admin-orders.html">Orders</a>
+                <a href="admin-users.html">Customers</a>
+                <a href="index.html">View Store</a>
+            </nav>
+
+            <button class="admin-sidebar-logout" onclick="adminLogout()">
+                Logout
+            </button>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1>Products</h1>
+                    <p>Manage your store inventory</p>
+                </div>
+
+                <span class="admin-role-badge">Administrator</span>
+            </header>
+
+            <!-- Page Content -->
+            <section class="admin-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Product Management</h2>
+                        <p>Add, update and remove store products.</p>
+                    </div>
+
+                    <button
+                        class="admin-primary-btn"
+                        onclick="openProductForm()">
+                        + Add Product
+                    </button>
+                </div>
+
+                <!-- Product Form -->
+                <div class="admin-product-form-container" id="productFormContainer"
+                     style="display: none;">
+
+                    <h3 id="productFormTitle">Add New Product</h3>
+
+                    <form id="adminProductForm">
+
+                        <input type="hidden" id="productId">
+
+                        <div class="admin-form-grid">
+
+                            <div class="admin-form-group">
+                                <label for="productName">Product Name</label>
+                                <input
+                                    type="text"
+                                    id="productName"
+                                    placeholder="Enter product name"
+                                    required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label for="productCategory">Category</label>
+                                <input
+                                    type="text"
+                                    id="productCategory"
+                                    placeholder="Enter category"
+                                    required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label for="productPrice">Price (₹)</label>
+                                <input
+                                    type="number"
+                                    id="productPrice"
+                                    min="1"
+                                    step="0.01"
+                                    placeholder="Enter price"
+                                    required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label for="productStock">Stock Quantity</label>
+                                <input
+                                    type="number"
+                                    id="productStock"
+                                    min="0"
+                                    step="1"
+                                    placeholder="Enter stock"
+                                    required>
+                            </div>
+
+                            <div class="admin-form-group admin-full-width">
+                                <label for="productImage">Image URL</label>
+                                <input
+                                    type="url"
+                                    id="productImage"
+                                    placeholder="Enter product image URL">
+                            </div>
+
+                        </div>
+
+                        <div class="admin-form-actions">
+                            <button type="submit" class="admin-primary-btn">
+                                Save Product
+                            </button>
+
+                            <button
+                                type="button"
+                                class="admin-secondary-btn"
+                                onclick="closeProductForm()">
+                                Cancel
+                            </button>
+                        </div>
+
+                        <p id="productFormMessage"></p>
+
+                    </form>
+
+                </div>
+
+                <!-- Product Table -->
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="adminProductsBody">
+                            <tr>
+                                <td colspan="5" class="admin-empty-cell">
+                                    Loading products...
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <footer class="admin-footer">
+                © 2026 ShopEasy Admin Panel. All rights reserved.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="js/admin.js"></script>
+
+
+    <script src="js/integration-config.js"></script>
+    <script src="js/integration.js"></script>
+
+</body>
+</html>

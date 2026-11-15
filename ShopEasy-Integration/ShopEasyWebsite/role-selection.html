@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Your Role | ShopEasy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        .role-container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .role-logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #5b4bdb;
+            margin-bottom: 12px;
+        }
+
+        .role-heading {
+            font-size: 32px;
+            color: #202338;
+            margin-bottom: 10px;
+        }
+
+        .role-subtitle {
+            color: #777b8c;
+            margin-bottom: 40px;
+        }
+
+        .role-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .role-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 18px;
+            border: 1px solid #e8eaf1;
+            box-shadow: 0 12px 35px rgba(30, 30, 70, 0.07);
+            transition: 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(30, 30, 70, 0.12);
+        }
+
+        .role-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .role-card h2 {
+            color: #202338;
+            margin-bottom: 12px;
+        }
+
+        .role-card p {
+            color: #85899a;
+            font-size: 14px;
+            line-height: 1.7;
+            min-height: 48px;
+        }
+
+        .role-button {
+            display: inline-block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 22px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .customer-button {
+            background: #5b4bdb;
+            color: white;
+        }
+
+        .customer-button:hover {
+            background: #4938c7;
+        }
+
+        .admin-button {
+            background: #202338;
+            color: white;
+        }
+
+        .admin-button:hover {
+            background: #343951;
+        }
+
+        .role-footer {
+            color: #9295a3;
+            font-size: 12px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 650px) {
+            .role-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .role-heading {
+                font-size: 25px;
+            }
+
+            .role-card {
+                padding: 30px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="role-container">
+
+        <div class="role-logo">ShopEasy</div>
+
+        <h1 class="role-heading">Welcome to ShopEasy!</h1>
+
+        <p class="role-subtitle">
+            Please select how you want to continue.
+        </p>
+
+        <div class="role-cards">
+
+            <!-- Customer -->
+            <section class="role-card">
+
+                <div class="role-icon">🛍️</div>
+
+                <h2>Customer</h2>
+
+                <p>
+                    Explore products, add items to your cart,
+                    place orders and track your purchases.
+                </p>
+
+                <a href="login.html"
+                   class="role-button customer-button">
+                    Continue as Customer
+                </a>
+
+            </section>
+
+
+            <!-- Admin -->
+            <section class="role-card">
+
+                <div class="role-icon">⚙️</div>
+
+                <h2>Administrator</h2>
+
+                <p>
+                    Manage products, view orders,
+                    monitor customers and manage your store.
+                </p>
+
+                <a href="admin-login.html"
+                   class="role-button admin-button">
+                    Continue as Admin
+                </a>
+
+            </section>
+
+        </div>
+
+        <p class="role-footer">
+            © 2026 ShopEasy. All rights reserved.
+        </p>
+
+    </main>
+
+
+    <script src="js/integration-config.js"></script>
+    <script src="js/integration.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Details | ShopEasy Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-brand">
+                <h2>ShopEasy</h2>
+                <span>ADMIN PANEL</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="admin-dashboard.html">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="admin-products.html">
+                    <span>▣</span> Products
+                </a>
+
+                <a href="admin-orders.html">
+                    <span>▤</span> Orders
+                </a>
+
+                <a href="admin-users.html" class="active">
+                    <span>♙</span> Customers
+                </a>
+
+                <a href="index.html">
+                    <span>⌕</span> View Store
+                </a>
+
+            </nav>
+
+            <button class="admin-sidebar-logout" onclick="adminLogout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Customer Details</h1>
+                    <p>View individual customer information</p>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <span class="admin-status-dot"></span>
+                    Administrator
+                </div>
+
+            </header>
+
+
+            <section class="admin-section">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <h2>Customer Profile</h2>
+                        <p>Customer account and purchase information.</p>
+                    </div>
+
+                    <a href="admin-users.html" class="admin-view-all">
+                        ← Back to Customers
+                    </a>
+
+                </div>
+
+
+                <!-- Customer Profile Card -->
+                <div class="admin-customer-details-card">
+
+                    <div class="admin-customer-profile-header">
+
+                        <div class="admin-customer-large-avatar"
+                             id="customerAvatar">
+                            C
+                        </div>
+
+                        <div>
+                            <h2 id="customerName">Loading customer...</h2>
+                            <p id="customerEmail">Loading email...</p>
+
+                            <span class="admin-customer-status">
+                                Registered Customer
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Personal Information -->
+                    <div class="admin-customer-information">
+
+                        <h3>Personal Information</h3>
+
+                        <div class="admin-customer-information-grid">
+
+                            <div>
+                                <span>Full Name</span>
+                                <p id="detailName">-</p>
+                            </div>
+
+                            <div>
+                                <span>Email Address</span>
+                                <p id="detailEmail">-</p>
+                            </div>
+
+                            <div>
+                                <span>Phone Number</span>
+                                <p id="detailPhone">Not provided</p>
+                            </div>
+
+                            <div>
+                                <span>Registration Date</span>
+                                <p id="detailDate">Not available</p>
+                            </div>
+
+                            <div class="customer-address-field">
+                                <span>Address</span>
+                                <p id="detailAddress">Not provided</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Customer Statistics -->
+                <div class="admin-order-summary">
+
+                    <div class="admin-order-summary-card">
+                        <span>Total Orders</span>
+                        <h3 id="customerOrderCount">0</h3>
+                    </div>
+
+                    <div class="admin-order-summary-card">
+                        <span>Total Spending</span>
+                        <h3 id="customerTotalSpending">₹0</h3>
+                    </div>
+
+                </div>
+
+
+                <!-- Order History -->
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Order History</h2>
+                        <p>Previous purchases made by this customer.</p>
+                    </div>
+                </div>
+
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Amount</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="customerOrdersBody">
+
+                            <tr>
+                                <td colspan="4" class="admin-empty-cell">
+                                    Loading orders...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <footer class="admin-footer">
+                © 2026 ShopEasy Admin Panel. All rights reserved.
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/admin.js"></script>
+
+
+    <script src="js/integration-config.js"></script>
+    <script src="js/integration.js"></script>
+
+</body>
+</html>

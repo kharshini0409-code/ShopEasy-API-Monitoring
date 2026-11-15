@@ -1,0 +1,7 @@
+com\shopeasy\backend\config\CorsConfig.class
+com\shopeasy\backend\entity\IntegrationEvent.class
+com\shopeasy\backend\repository\IntegrationEventRepository.class
+com\shopeasy\backend\ShopEasyBackendApplication.class
+com\shopeasy\backend\entity\IntegrationSnapshot.class
+com\shopeasy\backend\controller\IntegrationController.class
+com\shopeasy\backend\repository\IntegrationSnapshotRepository.class

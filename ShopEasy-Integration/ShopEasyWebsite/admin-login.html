@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | ShopEasy</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-login-page">
+
+    <div class="admin-login-container">
+
+        <div class="admin-login-card">
+
+            <!-- Logo -->
+            <div class="admin-login-brand">
+                <h1>ShopEasy</h1>
+                <p>ADMINISTRATION PORTAL</p>
+            </div>
+
+            <!-- Icon -->
+            <div class="admin-login-icon">
+                <span>♙</span>
+            </div>
+
+            <!-- Heading -->
+            <div class="admin-login-heading">
+                <h2>Welcome Back!</h2>
+                <p>Sign in to access your admin dashboard.</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="adminLoginForm">
+
+                <div class="admin-login-form-group">
+
+                    <label for="adminEmail">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="Enter your admin email"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <div class="admin-login-form-group">
+
+                    <label for="adminPassword">Password</label>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+                <p id="adminLoginMessage" class="admin-login-message"></p>
+
+                <button type="submit" class="admin-login-btn">
+                    Login to Dashboard
+                </button>
+
+            </form>
+
+            <!-- Footer -->
+            <div class="admin-login-footer">
+                <a href="login.html">← Back to Customer Login</a>
+                <p>© 2026 ShopEasy. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/admin.js"></script>
+
+
+    <script src="js/integration-config.js"></script>
+    <script src="js/integration.js"></script>
+
+</body>
+</html>
